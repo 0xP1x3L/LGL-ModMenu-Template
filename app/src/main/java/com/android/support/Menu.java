@@ -148,11 +148,7 @@ public class Menu {
         //********** The icon to open mod menu **********
         startimage = new ImageView(context);
         startimage.setLayoutParams(new RelativeLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT));
-<<<<<<< HEAD
-        int applyDimension = (int) TypedValue.applyDimension(1, ICON_SIZE, context.getResources().getDisplayMetrics()); //Icon size
-=======
         int applyDimension = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, ICON_SIZE, context.getResources().getDisplayMetrics()); //Icon size
->>>>>>> 1e39cb3 (Fix -> stable version)
         startimage.getLayoutParams().height = applyDimension;
         startimage.getLayoutParams().width = applyDimension;
         //startimage.requestLayout();
@@ -172,11 +168,7 @@ public class Menu {
         //********** The icon in Webview to open mod menu **********
         WebView wView = new WebView(context); //Icon size width=\"50\" height=\"50\"
         wView.setLayoutParams(new RelativeLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT));
-<<<<<<< HEAD
-        int applyDimension2 = (int) TypedValue.applyDimension(1, ICON_SIZE, context.getResources().getDisplayMetrics()); //Icon size
-=======
         int applyDimension2 = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, ICON_SIZE, context.getResources().getDisplayMetrics()); //Icon size
->>>>>>> 1e39cb3 (Fix -> stable version)
         wView.getLayoutParams().height = applyDimension2;
         wView.getLayoutParams().width = applyDimension2;
         wView.loadData("<html>" +
@@ -187,11 +179,7 @@ public class Menu {
                 "</html>", "text/html", "utf-8");
         wView.setBackgroundColor(0x00000000); //Transparent
         wView.setAlpha(ICON_ALPHA);
-<<<<<<< HEAD
-        wView.getSettings().setAppCacheEnabled(true);
-=======
         //wView.getSettings().setAppCacheEnabled(true);
->>>>>>> 1e39cb3 (Fix -> stable version)
         wView.setOnTouchListener(onTouchListener());
 
         //********** Settings icon **********
@@ -1039,11 +1027,7 @@ public class Menu {
         wView.loadData(text, "text/html", "utf-8");
         wView.setBackgroundColor(0x00000000); //Transparent
         wView.setPadding(0, 5, 0, 5);
-<<<<<<< HEAD
-        wView.getSettings().setAppCacheEnabled(false);
-=======
         //wView.getSettings().setAppCacheEnabled(false);
->>>>>>> 1e39cb3 (Fix -> stable version)
         linLayout.addView(wView);
     }
 

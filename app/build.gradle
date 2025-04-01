@@ -3,19 +3,11 @@ apply plugin: 'com.android.application'
 android {
     namespace "com.android.support" // ✅ Thêm dòng này
 
-<<<<<<< HEAD
-    compileSdkVersion 35
-    defaultConfig {
-        applicationId "com.android.support"
-        minSdkVersion 21
-        targetSdkVersion 35
-=======
     compileSdkVersion 31
     defaultConfig {
         applicationId "com.android.support"
         minSdkVersion 21
         targetSdkVersion 33
->>>>>>> 1e39cb3 (Fix -> stable version)
         versionCode 1
         versionName "3.2"
         ndk {
