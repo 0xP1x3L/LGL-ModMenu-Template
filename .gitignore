@@ -85,4 +85,9 @@ lint/tmp/
 # lint/reports/
 
 # Android Profiling
-*.hprof
+*.hprof.idea/
+.gradle/
+build/
+app/build/
+local.properties
+*.iml
