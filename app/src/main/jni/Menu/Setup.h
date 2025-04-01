@@ -109,19 +109,32 @@ void CheckOverlayPermission(JNIEnv *env, jclass thiz, jobject ctx){
 
 void Init(JNIEnv *env, jobject thiz, jobject ctx, jobject title, jobject subtitle){
     //Set sub title
+<<<<<<< HEAD
     setText(env, title, OBFUSCATE("<b>Modded by (yourname)</b>"));
 
     //Set sub title
     setText(env, subtitle, OBFUSCATE("<b><marquee><p style=\"font-size:30\">"
                                      "<p style=\"color:green;\">Modded by LGL</p> | "
                                      "https://github.com/LGLTeam | Lorem Ipsum is simply dummy text of the printing and typesetting</p>"
+=======
+    setText(env, title, OBFUSCATE("<b>Modded by Acer2k5</b>"));
+
+    //Set sub title
+    setText(env, subtitle, OBFUSCATE("<b><marquee><p style=\"font-size:30\">"
+                                     "<p style=\"color:green;\">Modded by Acer2k5</p> | "
+                                     "https://platinmods.com | Find more modded game in PlatinMods</p>"
+>>>>>>> 1e39cb3 (Fix -> stable version)
                                      "</marquee></b>"));
 
     //Dialog Example
     //setDialog(ctx,env,OBFUSCATE("Title"),OBFUSCATE("Message Example"));
 
     //Toast Example
+<<<<<<< HEAD
     Toast(env,ctx,OBFUSCATE("Modded by YOU"),ToastLength::LENGTH_LONG);
+=======
+    Toast(env,ctx,OBFUSCATE("Modded by Acer2k5"),ToastLength::LENGTH_LONG);
+>>>>>>> 1e39cb3 (Fix -> stable version)
 
     initValid = true;
 }

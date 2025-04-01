@@ -4,7 +4,11 @@ include $(CLEAR_VARS)
 # Here is the name of your lib.
 # When you change the lib name, change also on System.loadLibrary("") under OnCreate method on StaticActivity.java
 # Both must have same name
+<<<<<<< HEAD
 LOCAL_MODULE    := MyLibName
+=======
+LOCAL_MODULE    := MainAcer2k5
+>>>>>>> 1e39cb3 (Fix -> stable version)
 
 # -std=c++17 is required to support AIDE app with NDK
 LOCAL_CFLAGS := -w -s -Wno-error=format-security -fvisibility=hidden -fpermissive -fexceptions

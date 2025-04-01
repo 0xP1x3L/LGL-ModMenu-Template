@@ -145,10 +145,16 @@ jobjectArray GetFeatureList(JNIEnv *env, jobject context) {
     jobjectArray ret;
 
     const char *features[] = {
+<<<<<<< HEAD
             OBFUSCATE("Category_The Category"), //Not counted
             OBFUSCATE("Toggle_The toggle"),
             OBFUSCATE(
                     "100_Toggle_True_The toggle 2"), //This one have feature number assigned, and switched on by default
+=======
+            OBFUSCATE("Category_Category"), //Not counted
+            OBFUSCATE("Toggle_The toggle"),
+            OBFUSCATE("100_Toggle_True_The toggle 2"), //This one have feature number assigned, and switched on by default
+>>>>>>> 1e39cb3 (Fix -> stable version)
             OBFUSCATE("110_Toggle_The toggle 3"), //This one too
             OBFUSCATE("SeekBar_The slider_1_100"),
             OBFUSCATE("SeekBar_Kittymemory slider example_1_5"),
@@ -175,7 +181,11 @@ jobjectArray GetFeatureList(JNIEnv *env, jobject context) {
             OBFUSCATE("CollapseAdd_SeekBar_The slider_1_100"),
             OBFUSCATE("CollapseAdd_InputValue_Input number"),
 
+<<<<<<< HEAD
             OBFUSCATE("RichTextView_This is text view, not fully HTML."
+=======
+            /*OBFUSCATE("RichTextView_This is text view, not fully HTML."
+>>>>>>> 1e39cb3 (Fix -> stable version)
                       "<b>Bold</b> <i>italic</i> <u>underline</u>"
                       "<br />New line <font color='red'>Support colors</font>"
                       "<br/><big>bigger Text</big>"),
@@ -183,7 +193,11 @@ jobjectArray GetFeatureList(JNIEnv *env, jobject context) {
                       "This is WebView, with REAL HTML support!"
                       "<div style=\"background-color: darkblue; text-align: center;\">Support CSS</div>"
                       "<marquee style=\"color: green; font-weight:bold;\" direction=\"left\" scrollamount=\"5\" behavior=\"scroll\">This is <u>scrollable</u> text</marquee>"
+<<<<<<< HEAD
                       "</body></html>")
+=======
+                      "</body></html>")*/
+>>>>>>> 1e39cb3 (Fix -> stable version)
     };
 
     //Now you dont have to manually update the number everytime;
