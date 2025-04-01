@@ -1,5 +1,6 @@
 # Introduction
 ![GitHub](https://img.shields.io/github/license/LGLTeam/Android-Mod-Menu?style=flat-square)
+>For some reason LGLTeam disappeared from GitHub and their Template too, so I'm re-sharing their Template with some minor tweaks to make it work properly on the new version of Android Studio.
 
 Floating mod menu for il2cpp and other native android games. KittyMemory, MSHook, And64InlineHook and basic string obfuscator (AY obfuscator) included. Assets are stored as base64 in cpp and does not need to be stored under assets folder.
 
