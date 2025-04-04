@@ -20,8 +20,6 @@ out/
 # Gradle files
 .gradle/
 build/
-gradlew
-gradlew.bat
 
 # Local configuration file (sdk path, etc)
 local.properties
@@ -87,9 +85,4 @@ lint/tmp/
 # lint/reports/
 
 # Android Profiling
-*.hprof.idea/
-.gradle/
-build/
-app/build/
-local.properties
-*.iml
+*.hprof
