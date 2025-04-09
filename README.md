@@ -75,7 +75,7 @@ return-void
 Add the following line of code right after the invoke-super line in the onCreate method:
 
 ```Smali
-invoke-static {p0}, Lcom/android/support/Main;->StartWithoutPermission(Landroid/content/Context;)V
+invoke-static {p0}, Lcom/android/support/Main;->Start(Landroid/content/Context;)V
 ```
 Step 3: Recompile and re-sign the game APK
 
