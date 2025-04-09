@@ -33,7 +33,10 @@ Open the AndroidManifest.xml file of the game you want to inject the mod.
 Add the following line inside the <manifest> tag if it does not exist:
 ```XML
 <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 ```
+Add this line in bottom, you can follow video to know where to add.
 ```XML
 <service android:name="com.android.support.Launcher" android:enabled="true" android:exported="false" android:stopWithTask="true"/>
 ```
