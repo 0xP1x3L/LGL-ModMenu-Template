@@ -64,8 +64,6 @@ Search for the onCreate method. It should look like this:
 
 ```Smali
 .method protected onCreate(Landroid/os/Bundle;)V
-.locals 1
-.param p1, "savedInstanceState" # Landroid/os/Bundle;
 
 # [We need add code here]
 
@@ -75,8 +73,13 @@ return-void
 Add the following line of code right after the invoke-super line in the onCreate method:
 
 ```Smali
+invoke-static {p0}, Lcom/android/support/Main;->StartWithoutPermission(Landroid/content/Context;)V
+```
+Note this: If you have force closing game when open try to change the line of main smali
+```Smali
 invoke-static {p0}, Lcom/android/support/Main;->Start(Landroid/content/Context;)V
 ```
+
 Step 3: Recompile and re-sign the game APK
 
 Use apktool to recompile the edited smali files into DEX files.
