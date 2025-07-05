@@ -82,10 +82,7 @@ invoke-static {p0}, Lcom/android/support/Main;->Start(Landroid/content/Context;)
 
 Step 3: Recompile and re-sign the game APK
 
-Use apktool to recompile the edited smali files into DEX files.
-Re-sign the edited APK using jarsigner or Android Studio.
 Important Note:
-
 Make sure you have backed up the original game APK file before making any changes.
 
 Good luck with your mod injection!
