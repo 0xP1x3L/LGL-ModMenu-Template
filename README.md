@@ -64,8 +64,11 @@ Search for the onCreate method. It should look like this:
 
 ```Smali
 .method protected onCreate(Landroid/os/Bundle;)V
+  .locals 1
 
-# [We need add code here]
+  .line 76
+  # [We need add code here]
+  iget-object v0, p0, Lcom/google/firebase/UnityPlayerActivity;->mUnityPlayer:Lcom/unity3d/player/UnityPlayer;
 
 return-void
 .end method
@@ -81,6 +84,75 @@ invoke-static {p0}, Lcom/android/support/Main;->Start(Landroid/content/Context;)
 ```
 
 Step 3: Recompile and re-sign the game APK
+
+# About game that you use Hex Patch
+
+If you want people know that you mod this game or app.
+You need to find MainActivity smali of game/app
+
+Find "onCreate()" in MainActivity smali
+
+```Smali
+.method protected onCreate(Landroid/os/Bundle;)V
+    .locals 1
+
+    .line 76
+    iget-object v0, p0, Lcom/google/firebase/UnityPlayerActivity;->mUnityPlayer:Lcom/unity3d/player/UnityPlayer;
+
+    if-eqz v0, :cond_0
+
+    .line 77
+    iget-object v0, p0, Lcom/google/firebase/UnityPlayerActivity;->mUnityPlayer:Lcom/unity3d/player/UnityPlayer;
+
+    invoke-virtual {v0}, Lcom/unity3d/player/UnityPlayer;->quit()V
+
+    const/4 v0, 0x0
+
+    .line 78
+    iput-object v0, p0, Lcom/google/firebase/UnityPlayerActivity;->mUnityPlayer:Lcom/unity3d/player/UnityPlayer;
+
+    .line 80
+    :cond_0
+    invoke-super {p0, p1}, Lcom/unity3d/player/UnityPlayerActivity;->onCreate(Landroid/os/Bundle;)V
+
+    return-void
+.end method
+```
+
+Change like this (if you dont understand, use AI, it will explain)
+
+```Smali
+.method protected onCreate(Landroid/os/Bundle;)V
+    .locals 3
+
+    .line 76
+    iget-object v0, p0, Lcom/google/firebase/MessagingUnityPlayerActivity;->mUnityPlayer:Lcom/unity3d/player/UnityPlayer;
+
+    if-eqz v0, :cond_0
+
+    .line 77
+    iget-object v0, p0, Lcom/google/firebase/MessagingUnityPlayerActivity;->mUnityPlayer:Lcom/unity3d/player/UnityPlayer;
+
+    invoke-virtual {v0}, Lcom/unity3d/player/UnityPlayer;->quit()V
+
+    const/4 v0, 0x0
+
+    .line 78
+    iput-object v0, p0, Lcom/google/firebase/MessagingUnityPlayerActivity;->mUnityPlayer:Lcom/unity3d/player/UnityPlayer;
+
+    .line 80
+    :cond_0
+    invoke-super {p0, p1}, Lcom/unity3d/player/UnityPlayerActivity;->onCreate(Landroid/os/Bundle;)V
+
+    const-string v0, "Modded by 0xP1x3L"
+    const/4 v1, 0x1
+    invoke-static {p0, v0, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+    move-result-object v0
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    return-void
+.end method
+```
 
 Important Note:
 Make sure you have backed up the original game APK file before making any changes.
