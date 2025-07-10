@@ -144,11 +144,13 @@ Change like this (if you dont understand, use AI, it will explain)
     :cond_0
     invoke-super {p0, p1}, Lcom/unity3d/player/UnityPlayerActivity;->onCreate(Landroid/os/Bundle;)V
 
+    ========= ADD these lines =========
     const-string v0, "Modded by 0xP1x3L"
     const/4 v1, 0x1
     invoke-static {p0, v0, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
     move-result-object v0
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+    ========= END =========
 
     return-void
 .end method
