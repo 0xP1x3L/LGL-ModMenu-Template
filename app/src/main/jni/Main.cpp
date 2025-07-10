@@ -15,14 +15,14 @@
 #include "KittyMemory/MemoryPatch.h"
 #include "Menu/Setup.h"
 #include <android/log.h>
+#include <cmath>
+#include "Includes/Macros.h"
 
 //Target lib here
 #define targetLibName OBFUSCATE("libil2cpp.so")
 #define  LOG_TAG    "Features"
 #define  LOGI(...)  __android_log_print(ANDROID_LOG_INFO,LOG_TAG,__VA_ARGS__)
 
-#include <cmath>
-#include "Includes/Macros.h"
 
 bool isCoolDown;
 float attackInput, critRateInput, critDmgInput, skillDmgInput;
