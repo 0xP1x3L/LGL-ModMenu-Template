@@ -156,6 +156,9 @@ Change like this (if you dont understand, use AI, it will explain)
 .end method
 ```
 
+# How to bypass Pairip protections / Bypass Certificate check
+[Pairip Bypass](https://platinmods.com/threads/how-to-bypass-pairip-protections-latest-too-easy.203105)
+
 Important Note:
 Make sure you have backed up the original game APK file before making any changes.
 
