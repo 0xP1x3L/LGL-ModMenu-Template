@@ -1,5 +1,5 @@
 # Introduction
-LGL Mod Menu Template modified and updated version by me. (Updated in 7/2025)
+LGL Mod Menu Template modified and updated version by me. (Updated in 10/2025)
 
 # How to mod and hook
 Main file to create function in mod menu is [Main.cpp](https://github.com/0xP1x3L/LGL-ModMenu-Template/blob/f7e47fb361a06132321bb9b809a238f9796784b9/app/src/main/jni/Main.cpp) file, you can read how i use HOOK.
@@ -159,7 +159,25 @@ Change like this (if you dont understand, use AI, it will explain)
 # How to bypass Pairip protections / Bypass Certificate check
 [Pairip Bypass](https://platinmods.com/threads/how-to-bypass-pairip-protections-latest-too-easy.203105)
 
-Important Note:
+Another way to bypass (I haven't tested it yet):
+Add this code below the LicenseCheck section:
+```xml
+<activity android:exported="false" android:name="com.pairip.licensecheck.LicenseActivity"/>
+<provider android:authorities="com.YOUR.GAME.com.pairip.licensecheck.LicenseContentProvider" android:exported="false" android:name="com.pairip.licensecheck.LicenseContentProvider"/>
+```
+To this:
+```xml
+<activity android:exported="false" android:name="com.pairip.licensecheck.LicenseActivity"/>
+<provider android:authorities="com.YOUR.GAME.com.pairip.licensecheck.LicenseContentProvider" android:exported="false" android:name="com.pairip.licensecheck.LicenseContentProvider"/>
+<meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store"/>
+<meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_STANDALONE_APK"/>
+<meta-data android:name="com.android.vending.splits" android:resource="@xml/splits0"/>
+<meta-data android:name="com.android.vending.derived.apk.id" android:value="2"/>
+<meta-data android:name="com.android.dynamic.apk.fused.modules" android:value="base"/>
+```
+
+
+# Important Note:
 Make sure you have backed up the original game APK file before making any changes.
 
 Good luck with your mod injection!
