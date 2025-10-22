@@ -175,7 +175,7 @@ To this:
 <meta-data android:name="com.android.vending.derived.apk.id" android:value="2"/>
 <meta-data android:name="com.android.dynamic.apk.fused.modules" android:value="base"/>
 ```
-
+And add this [file](https://github.com/0xP1x3L/LGL-ModMenu-Template/blob/master/splits0.xml) to Game/res/xml/ folder
 
 # Important Note:
 Make sure you have backed up the original game APK file before making any changes.
