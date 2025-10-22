@@ -159,24 +159,6 @@ Change like this (if you dont understand, use AI, it will explain)
 # How to bypass Pairip protections / Bypass Certificate check
 [Pairip Bypass](https://platinmods.com/threads/how-to-bypass-pairip-protections-latest-too-easy.203105)
 
-Another way to bypass (I haven't tested it yet):
-Add this code below the LicenseCheck section:
-```xml
-<activity android:exported="false" android:name="com.pairip.licensecheck.LicenseActivity"/>
-<provider android:authorities="com.YOUR.GAME.com.pairip.licensecheck.LicenseContentProvider" android:exported="false" android:name="com.pairip.licensecheck.LicenseContentProvider"/>
-```
-To this:
-```xml
-<activity android:exported="false" android:name="com.pairip.licensecheck.LicenseActivity"/>
-<provider android:authorities="com.YOUR.GAME.com.pairip.licensecheck.LicenseContentProvider" android:exported="false" android:name="com.pairip.licensecheck.LicenseContentProvider"/>
-<meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store"/>
-<meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_STANDALONE_APK"/>
-<meta-data android:name="com.android.vending.splits" android:resource="@xml/splits0"/>
-<meta-data android:name="com.android.vending.derived.apk.id" android:value="2"/>
-<meta-data android:name="com.android.dynamic.apk.fused.modules" android:value="base"/>
-```
-And add this [file](https://github.com/0xP1x3L/LGL-ModMenu-Template/blob/master/splits0.xml) to Game/res/xml/ folder
-
 # Important Note:
 Make sure you have backed up the original game APK file before making any changes.
 
