@@ -1,0 +1,43 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace = "com.android.support"
+
+    compileSdk 36
+    buildToolsVersion "37.0.0"
+    defaultConfig {
+        applicationId "com.android.support"
+        minSdk 21
+        targetSdk 36
+        versionCode 1
+        versionName "3.2"
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+        }
+        signingConfig = signingConfigs.debug
+    }
+    buildTypes {
+        release {
+            shrinkResources = false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            shrinkResources = false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    externalNativeBuild {
+        ndkBuild {
+            path file('src/main/jni/Android.mk')
+        }
+    }
+}
+
+// Dependencies are managed via dependencyResolutionManagement in settings.gradle
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}
