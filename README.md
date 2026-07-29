@@ -157,7 +157,7 @@ Change like this (if you dont understand, use AI, it will explain)
 ```
 
 # How to bypass Pairip protections / Bypass Certificate check
-[Pairip Bypass](https://platinmods.com/threads/new-pairip-kill-tutorial-tested-on-vpnify.196876/)
+[Pairip Bypass](https://petruknisme.medium.com/bypassing-pairip-integrity-checks-21d7bdd4a052)
 
 # Important Note:
 Make sure you have backed up the original game APK file before making any changes.
