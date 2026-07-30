@@ -20,7 +20,7 @@ About tutorial below, you can read how to inject mod in to apk file.
 
 Decompile the game's APK file if you haven't done so already.
 
-After you build your app by Android Studio, nevigate to lib app foulder.
+After you build your app by Android Studio, nevigate to lib app folder.
 
 PLEASE REMEMBER TO COPY FILE lib .so of app to lib game. 
 
